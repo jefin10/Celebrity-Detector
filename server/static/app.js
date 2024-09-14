@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
             reader.onload = function(e) {
                 const base64Image = e.target.result;
                 sendImageToServer(base64Image);
+                text[0].innerHTML = "drag and drop your image here or click to select an image!"
             };
 
             reader.readAsDataURL(file);
@@ -19,7 +20,13 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Please select an image file.');
         }
     });
-
+    const filein = document.getElementById('file')
+    var text = document.getElementsByClassName('text' )
+    filein.addEventListener('change', function(){
+        if(filein.files.length>0){
+            text[0].innerHTML = "File upload has been succesfull"
+        }
+    })
     function sendImageToServer(base64Image) {
         const formData = new FormData();
         formData.append('image_data', base64Image);
@@ -37,14 +44,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 let resultText = '';
                 data.forEach((result, index) => {
-                    resultText += `Result ${index + 1}:\n`;
-                    resultText += `Class: ${result.class}\n`;
-                    resultText += `Probabilities:\n`;
-                    result.class_probability.forEach((prob, i) => {
-                        const className = Object.keys(result.class_dictionary).find(key => result.class_dictionary[key] === i);
-                        resultText += `  ${className}: ${prob}%\n`;
-                    });
-                    resultText += '\n';
+                    resultText += `Result :\n`;
+                    resultText += `${result.class}\n`;
+                    
+                    
                 });
                 alert(resultText);
             }

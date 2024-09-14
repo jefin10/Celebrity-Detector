@@ -67,14 +67,13 @@ body {
     margin-bottom: 20px;
 }
 
-.bbutton {
+.bbutton1 {
     width: 18%;
     appearance: none;
     --border-radius: 15px;
     --border-width: 4px;
     position: relative;
     padding: 1em 2em;
-    border: 0;
     background-color: #212121;
     font-family: "Roboto", Arial, "Segoe UI", sans-serif;
     font-size: 18px;
@@ -82,29 +81,300 @@ body {
     color: #fff;
     z-index: 2;
     border-radius: 15px;
-    transition: transform 0.3s ease-in-out; /* Smooth size increase on hover */
+    transition: transform 0.3s ease-in-out;
+    border: 5px solid #FF4655;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-
-.bbutton:hover::after {
-    animation-play-state: running;
+.bbutton1::before {
+    content: "Virat Kohli";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 70, 85, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-@keyframes rotate-hue {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
+.bbutton1::after {
+    content: attr(data-hover-text);
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
-.bbutton:hover {
-    transform: scale(1.1); 
+.bbutton1:hover {
+    transform: scale(1.1);
 }
 
-.bbutton:active {
+.bbutton1:hover::before,
+.bbutton1:hover::after {
+    opacity: 1;
+}
+
+.bbutton1:active {
+    --border-width: 5px;
+}
+.bbutton2 {
+    width: 18%;
+    appearance: none;
+    --border-radius: 15px;
+    --border-width: 4px;
+    position: relative;
+    padding: 1em 2em;
+    background-color: #212121;
+    font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    z-index: 2;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+    border: 5px solid #FF4655;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bbutton2::before {
+    content: "M S Dhoni";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 70, 85, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.bbutton2::after {
+    content: attr(data-hover-text);
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.bbutton2:hover {
+    transform: scale(1.1);
+}
+
+.bbutton2:hover::before,
+.bbutton2:hover::after {
+    opacity: 1;
+}
+
+.bbutton2:active {
+    --border-width: 5px;
+}
+.bbutton3 {
+    width: 18%;
+    appearance: none;
+    --border-radius: 15px;
+    --border-width: 4px;
+    position: relative;
+    padding: 1em 2em;
+    background-color: #212121;
+    font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    z-index: 2;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+    border: 5px solid #FF4655;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bbutton3::before {
+    content: "Leonardo DiCaprio";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 70, 85, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.bbutton3::after {
+    content: attr(data-hover-text);
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.bbutton3:hover {
+    transform: scale(1.1);
+}
+
+.bbutton3:hover::before,
+.bbutton3:hover::after {
+    opacity: 1;
+}
+
+.bbutton3:active {
+    --border-width: 5px;
+}
+.bbutton4 {
+    width: 18%;
+    appearance: none;
+    --border-radius: 15px;
+    --border-width: 4px;
+    position: relative;
+    padding: 1em 2em;
+    background-color: #212121;
+    font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    z-index: 2;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+    border: 5px solid #FF4655;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bbutton4::before {
+    content: "Lionel Messi";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 70, 85, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.bbutton4::after {
+    content: attr(data-hover-text);
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.bbutton4:hover {
+    transform: scale(1.1);
+}
+
+.bbutton4:hover::before,
+.bbutton4:hover::after {
+    opacity: 1;
+}
+
+.bbutton4:active {
+    --border-width: 5px;
+}
+.bbutton5 {
+    width: 18%;
+    appearance: none;
+    --border-radius: 15px;
+    --border-width: 4px;
+    position: relative;
+    padding: 1em 2em;
+    background-color: #212121;
+    font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    z-index: 2;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+    border: 5px solid #FF4655;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bbutton5::before {
+    content: "Christiano Ronaldo";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 70, 85, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.bbutton5::after {
+    content: attr(data-hover-text);
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.bbutton5:hover {
+    transform: scale(1.1);
+}
+
+.bbutton5:hover::before,
+.bbutton5:hover::after {
+    opacity: 1;
+}
+
+.bbutton5:active {
     --border-width: 5px;
 }
 .imagek{
